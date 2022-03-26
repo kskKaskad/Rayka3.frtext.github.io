@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><title>Тест по теме "Форматирование текста".</title>
+<meta charset="utf-8">
+<style>
+p {
+ font-size:24px;
+}
+input {
+ font-size:24px;
+}
+.vo{
+    color: green;
+}
+.nvo{
+    color: red;
+}
+.Turtles {
+    position: relative;
+    float: right;
+}
+.mybutton{
+    hight: 50px;
+    width: 100px;
+    background-color: red;
+    color: white;
+}
+</style>
+</head>
+<body style="background-color:#ff8;">
+<image class="Turtles" src="img/TM.jpg"></image>
+<h1>Выполните задания по теме "Форматирование текста"?</h1>
+<p>№1. Есть два способа форматирования. Допишите второе. (Писать с большой буквы)<br>Прямое и...<input type="text" id="z_1"></p>
+<p>№2. Как называется минимальная графическая единица текста? (Записать цифру)<br>1)Буква 2)Символ 3)Точка<input type="text" id="z_2"></p>
+<p>№3. Процесс оформления текстового документа для повышения воспринимаемости текста называется?<br>1)Редактирование 2)Рецензирование 3)Исправление 4)Форматирование<input type="text" id="z_3"></p>
+<p>№4. Кегель показывает?<br>1)Размер шрифта 2)Гарнитура шрифта 3)Тип шрифта<input type="text" id="z_4"></p>
+<p>№5. Как нельзя выровнять текст абзаца?<br>1)По центру 2)По левому краю 3)По высоте<input type="text" id="z_5"></p>
+<p>№6. Какой ориентации страницы не бывает?<br>1)Книжной 2)Вертиканой 3)Диагональной 4)Альбомной<input type="text" id="z_6"></p>
+<button class="mybutton" onclick="proverit();">Проверить</button>
+<div id="rezultat"></div>
+<script>
+/*   window.onload = function() {
+    var drawingCanvas = document.getElementById('smile');
+    if(drawingCanvas && drawingCanvas.getContext) {
+     var context = drawingCanvas.getContext('2d');
+     // Рисуем окружность 
+     context.strokeStyle = "#000";
+     context.fillStyle = "#fc0";
+     context.beginPath();
+     context.arc(100,100,50,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     // Рисуем левый глаз 
+     context.fillStyle = "#fff";
+     context.beginPath();
+     context.arc(84,90,8,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     // Рисуем правый глаз 
+     context.beginPath();
+     context.arc(116,90,8,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     // Рисуем рот
+     context.beginPath();
+     context.moveTo(70,115);
+     context.quadraticCurveTo(100,130,130,115);
+     context.quadraticCurveTo(100,150,70,115); 
+     context.closePath();
+     context.stroke();
+     context.fill();
+    }
+   }*/
+function proverit(){
+let pr_otv_zadachi_1 = 'Стилевое';
+let pr_otv_zadachi_2 = 2;
+let pr_otv_zadachi_3 = 4;
+let pr_otv_zadachi_4 = 1;
+let pr_otv_zadachi_5 = 3;
+let pr_otv_zadachi_6 = 3;
+let otv_uch_1 = document.getElementById('z_1').value;
+let otv_uch_2 = document.getElementById('z_2').value;
+let otv_uch_3 = document.getElementById('z_3').value;
+let otv_uch_4 = document.getElementById('z_4').value;
+let otv_uch_5 = document.getElementById('z_5').value;
+let otv_uch_6 = document.getElementById('z_6').value;
+
+let ball=0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+    ball +=1;
+    otveti = "<p class='vo'>Вопрос 1. Вы ответили верно. Ваш ответ: "+otv_uch_1+"</p>";
+} else {
+    otveti = "<p class='nvo'>Вопрос 1. Вы ответили не верно. Ваш ответ: "+otv_uch_1+"</p>"; 
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+    ball +=1;
+    otveti += "<br><p class='vo'>Вопрос 2. Вы ответили верно. Ваш ответ: "+otv_uch_2+"</p>";
+} else {
+    otveti += "<br><p class='nvo'>Вопрос 2. Вы ответили не верно. Ваш ответ: "+otv_uch_2+"</p>"; 
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+    ball +=1;
+    otveti += "<br><p class='vo'>Вопрос 3. Вы ответили верно. Ваш ответ: "+otv_uch_3+"</p>";
+} else {
+    otveti += "<br><p class='nvo'>Вопрос 3. Вы ответили не верно. Ваш ответ: "+otv_uch_3+"</p>";
+}
+if(otv_uch_4 == pr_otv_zadachi_4){
+    ball +=1;
+    otveti += "<br><p class='vo'>Вопрос 4. Вы ответили верно. Ваш ответ: "+otv_uch_4+"</p>";
+} else {
+    otveti += "<br><p class='nvo'>Вопрос 4. Вы ответили не верно. Ваш ответ: "+otv_uch_4+"</p>";
+}
+if(otv_uch_5 == pr_otv_zadachi_5){
+    ball +=1;
+    otveti += "<br><p class='vo'>Вопрос 5. Вы ответили верно. Ваш ответ: "+otv_uch_5+"</p>";
+} else {
+    otveti += "<br><p class='nvo'>Вопрос 5. Вы ответили не верно. Ваш ответ: "+otv_uch_5+"</p>";
+}
+if(otv_uch_6 == pr_otv_zadachi_6){
+    ball +=1;
+    otveti += "<br><p class='vo'>Вопрос 6. Вы ответили верно. Ваш ответ: "+otv_uch_6+"</p>";
+} else {
+    otveti += "<br><p class='nvo'>Вопрос 6. Вы ответили не верно. Ваш ответ: "+otv_uch_6+"</p>";
+}
+vsego_zadach = 6;
+procent_vip = ball/vsego_zadach * 100;
+procent_vip = procent_vip.toFixed();
+console.log(otveti);
+document.getElementById('rezultat').innerHTML = "Задания выполнены верно на "+Math.round(procent_vip*100)/100+"%."+otveti;
+}
+
+</script>
+</body>
+</html>
